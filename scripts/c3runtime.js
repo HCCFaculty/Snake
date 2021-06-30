@@ -3104,7 +3104,10 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Cnds.OnLoadFinished,
 		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.PlatformInfo.Cnds.IsOnMobile,
+		C3.Plugins.Browser.Cnds.IsFullscreen,
+		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Touch.Cnds.IsTouchingObject
 		];
 	};
