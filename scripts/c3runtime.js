@@ -3064,19 +3064,13 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
 		C3.Plugins.System.Cnds.For,
 		C3.Plugins.Touch.Exps.TouchCount,
-		C3.Plugins.System.Cnds.CompareBetween,
-		C3.Plugins.Touch.Exps.XAt,
-		C3.Plugins.System.Exps.loopindex,
-		C3.Plugins.Sprite.Exps.BBoxLeft,
-		C3.Plugins.Sprite.Exps.Width,
-		C3.Plugins.Sprite.Exps.BBoxRight,
-		C3.Plugins.Touch.Exps.YAt,
-		C3.Plugins.Sprite.Exps.BBoxTop,
-		C3.Plugins.Sprite.Exps.Height,
-		C3.Plugins.Sprite.Exps.BBoxBottom,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Touch.Exps.XAt,
+		C3.Plugins.System.Exps.loopindex,
+		C3.Plugins.Touch.Exps.YAt,
 		C3.Plugins.System.Exps.min,
+		C3.Plugins.Sprite.Exps.Width,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.System.Cnds.IsBetweenAngles,
 		C3.Plugins.Arr.Acts.Push,
@@ -3438,21 +3432,6 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 			return () => (f0() - 1);
 		},
 		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			return () => f0(f1(), "Game");
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const n1 = p._GetNode(1);
-			return () => (n0.ExpObject() - (n1.ExpObject() * 0.2));
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			const n1 = p._GetNode(1);
-			return () => (n0.ExpObject() + (n1.ExpObject() * 0.2));
-		},
-		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			const f2 = p._GetNode(2).GetBoundMethod();
@@ -3599,11 +3578,6 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		() => "Directions2",
 		() => "Keyboard2",
 		() => "Thumbstick2",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			return () => f0(f1(), "Tutorial");
-		},
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
