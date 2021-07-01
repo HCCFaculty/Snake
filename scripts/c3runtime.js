@@ -3096,14 +3096,13 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Text.Acts.SetFontFace,
 		C3.Plugins.System.Acts.ResetGlobals,
-		C3.Plugins.System.Acts.RestartLayout,
-		C3.Plugins.System.Cnds.OnLoadFinished,
 		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.Touch.Cnds.OnTouchStart,
+		C3.Plugins.System.Cnds.OnLoadFinished,
 		C3.Plugins.PlatformInfo.Cnds.IsOnMobile,
+		C3.Plugins.Touch.Cnds.IsTouchingObject,
+		C3.Plugins.Touch.Cnds.OnTouchStart,
 		C3.Plugins.Browser.Cnds.IsFullscreen,
-		C3.Plugins.Browser.Acts.RequestFullScreen,
-		C3.Plugins.Touch.Cnds.IsTouchingObject
+		C3.Plugins.Browser.Acts.RequestFullScreen
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -3123,6 +3122,8 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{TextEndScore: 0},
 		{TextEndPlayAgain: 0},
 		{TextTut: 0},
+		{TextTitlePlay: 0},
+		{TextTitleTutorial: 0},
 		{Keyboard: 0},
 		{Array: 0},
 		{Solid: 0},
@@ -3145,6 +3146,7 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		{TextLoading: 0},
 		{PlatformInfo: 0},
 		{Browser: 0},
+		{TextTitle: 0},
 		{Speed: 0},
 		{CurrentTileX: 0},
 		{CurrentTileY: 0},
@@ -3619,7 +3621,11 @@ value){switch(index){case ENABLE:this.SetEnabled(value);break}}GetDebuggerProper
 		() => "Don't crash into the wall or yourself",
 		() => "Eat as much food as you can before time runs out",
 		() => "When the timer runs out, answer the question",
-		() => "Can you get all 10 questions correct?"
+		() => "Can you get all 10 questions correct?",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0(6, 17, 39, 40);
+		}
 	];
 }
 
